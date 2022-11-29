@@ -101,7 +101,7 @@ def update_bookmark(bookmark_id):
         with connection.cursor() as cursor:
             cursor.execute(UPDATE_BOOKMARKS, (bookmark_id))
             data = cursor.fetchall()
-
+            print(data)
             return render_template('edit.html', data=data[0])
 
 
